@@ -31,7 +31,8 @@
     "rimraf": "^2.6.2",
     "serve-static": "^1.13.1",
     "style-loader": "^0.19.1",
-    "webpack": "^3.10.0"
+    "webpack": "^3.10.0",
+    "babel-register-cli": "^5.0.0"
   },
   "repository": {
     "url": "https://glitch.com/edit/#!/react-babel"
