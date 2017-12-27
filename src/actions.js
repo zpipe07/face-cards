@@ -1,13 +1,13 @@
-import axios from 'axios';
+import axios from 'axios'
+import { ACTION_TYPES } from './constants'
 
-import { ACTION_TYPES } from './constants';
-
-const usersURL = 'https://jsonplaceholder.typicode.com/users';
+const usersURL = 'https://jsonplaceholder.typicode.com/users'
+const postsURL = 'https://jsonplaceholder.typicode.com/posts?userId='
 
 export function fetchUsers() {
   return function(dispatch) {
     dispatch(requestUsers())
-    
+
     return axios.get(usersURL)
       .then(
         (res) => res.data,
@@ -33,8 +33,33 @@ export function receiveUsers(users) {
 }
 
 export function fetchPostsForUser(userId) {
+  return function(dispatch) {
+    dispatch(requestPosts())
+
+    return axios.get(`${postsURL}${userId}`)
+      .then(
+        (res) => res.data,
+        (err) => console.log('An error occurred.', err),
+      )
+      .then((json) => {
+        return dispatch(receivePosts(json))
+      })
+  }
+  // return {
+  //   type: ACTION_TYPES.POSTS.FETCH_FOR_USER,
+  //   userId,
+  // }
+}
+
+export function requestPosts() {
   return {
-    type: ACTION_TYPES.POSTS.FETCH_FOR_USER,
-    userId,
+    type: ACTION_TYPES.POSTS.REQUEST,
+  }
+}
+
+export function receivePosts(posts) {
+  return {
+    type: ACTION_TYPES.POSTS.RECEIVE,
+    posts,
   }
 }

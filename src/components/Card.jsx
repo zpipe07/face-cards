@@ -8,7 +8,7 @@ function Card ({name, email, catchPhrase, onClick}) {
     <div
       className={Styles.Card}
       onClick={onClick}>
-      <img src='https://api.adorable.io/avatars/150/{email}.png'/>
+      <img src={`https://api.adorable.io/avatars/150/${email}.png`}/>
       <span>{catchPhrase}</span>
       <span>{name}</span>
       <span>{email}</span>
