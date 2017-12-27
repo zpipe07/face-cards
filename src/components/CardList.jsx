@@ -12,7 +12,7 @@ function CardList({ users, onCardClick }) {
             name={name}
             email={email}
             catchPhrase={company.catchPhrase}
-            key={id.toString()}
+            key={id}
             onClick={() => onCardClick(id)} />
         )
       })}

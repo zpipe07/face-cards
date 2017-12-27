@@ -6,11 +6,12 @@ import Post from './Post'
 function PostList({ posts }) {
   return (
     <div>
-      {posts.map(({ title, body }) => {
+      {posts.map(({ title, body, id }) => {
         return (
           <Post
             title={title}
-            body={body} />
+            body={body}
+            key={id} />
         )
       })}
     </div>

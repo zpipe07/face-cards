@@ -1,13 +1,14 @@
 import { connect } from 'react-redux'
+import PostList from '../components/PostList'
 
 const mapStateToProps = (state) => {
   return {
-    posts: state.users.posts,
+    posts: state.posts.items,
   }
 }
 
 const VisiblePostList = connect(
   mapStateToProps,
-)(CardList)
+)(PostList)
 
 export default VisiblePostList

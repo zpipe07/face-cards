@@ -6,7 +6,7 @@ module.exports = {
       RECEIVE: 'receiveUsers',
     },
     POSTS: {
-      FETCH_FOR_USER: 'fetchPostsForUser',
+      // FETCH_FOR_USER: 'fetchPostsForUser',
       REQUEST: 'requestPosts',
       RECEIVE: 'receivePosts',
     }

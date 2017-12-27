@@ -45,10 +45,6 @@ export function fetchPostsForUser(userId) {
         return dispatch(receivePosts(json))
       })
   }
-  // return {
-  //   type: ACTION_TYPES.POSTS.FETCH_FOR_USER,
-  //   userId,
-  // }
 }
 
 export function requestPosts() {

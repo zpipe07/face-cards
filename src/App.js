@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 
-// import { fetchUsers, fetchPostsForUser } from './actions'
-
 import VisibleCardList from './containers/VisibleCardList'
+import VisiblePostList from './containers/VisiblePostList'
 
 class App extends Component {
   componentWillMount() {
@@ -13,6 +12,7 @@ class App extends Component {
     return (
       <div className="App">
         <VisibleCardList />
+        <VisiblePostList />
       </div>
     );
   }
