@@ -1,22 +1,21 @@
-import React, { Component } from 'react';
-import { fetchUsers } from './actions';
+import React, { Component } from 'react'
 
-import CardList from './components/CardList';
+// import { fetchUsers, fetchPostsForUser } from './actions'
 
-let users = [];
+import VisibleCardList from './containers/VisibleCardList'
 
 class App extends Component {
   componentWillMount() {
-     users = fetchUsers();
+     // users = fetchUsers()
   }
 
   render() {
     return (
       <div className="App">
-        <CardList users={users}/>
+        <VisibleCardList />
       </div>
     );
   }
 }
 
-export default App;
+export default App

@@ -4,6 +4,19 @@ Much of the work at SendGrid involves pulling in data from multiple sources and 
 
 This problem is separated into two tasks. First, display three "cards" for randomly-selected users which displays their name, email address, company catchphrase, and, of course, their adorable avatar. Second, display 5 randomly-selected posts when a user clicks on an individual card.
 
+## Getting Started
+
+Click on the name of the application in the upper-left corner and select "Remix". This your own special version of the application that you'll be working in. We'll need you to send us this URL.
+
+If you want to work on this locally, click on the name of the project in the upper-left corner, select "Advanced Options" and either download the project or export it to Github.
+
+If you're looking to run your unit tests from within Glitch, then you can select "Open Console" from the "Advanced Options" and run `npm test`.
+
+If you have any issues. Download the project and work on it locally. Send us the zip file.
+
+## Time Expectations
+
+We would expect this task to only take about 3 hours to complete. It's okay to go over if you're enjoying yourself, but if you go too much beyond please add some comments on how you would see yourself finishing this, what changes you might make, etc. and make your submission.
 
 ## General Requirements
 
@@ -13,10 +26,6 @@ This problem is separated into two tasks. First, display three "cards" for rando
 4. Write unit tests and ensure code coverage.
 
 Familiarize yourself with the [Jest documentation](https://facebook.github.io/jest/).
-
-## Time Expectations
-
-We would expect this task to only take about 3 hours to complete. It's okay to go over if you're enjoying yourself, but if you go too much beyond please add some comments on how you would see yourself finishing this, what changes you might make, etc. and make your submission.
 
 ## Technical Requirements
 
@@ -49,33 +58,3 @@ We would expect this task to only take about 3 hours to complete. It's okay to g
 ### Part 2 Design
 
 ![Design for Part 2][part2]
-
-
-## Getting Started
-
-1. Fork and then clone the provided GitHub repository.
-
-2. Install the project's dedpendencies.
-
-```
-npm install
-```
-
-3. Start the development server.
-
-```
-npm start
-```
-
-4. Run your unit tests.
-
-```
-npm test
-```
-
-## Submitting your Work
-
-1. Double check the application works as expected and that all unit tests pass.
-2. Push code to your forked repository.
-3. Open a pull request from your forked repository to the repsository which was originally provided.
-4. Delete your repository or make it private after we have acknowledged receipt of your submission.

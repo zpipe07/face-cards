@@ -1,33 +1,40 @@
+import axios from 'axios';
+
 import { ACTION_TYPES } from './constants';
 
+const usersURL = 'https://jsonplaceholder.typicode.com/users';
+
 export function fetchUsers() {
-  return [
-    {
-      id: 1,
-      name: 'Leanne Graham',
-      username: 'Bret',
-      email: 'Sincere@april.biz',
-      address: {
-        street: 'Kulas Light',
-        suite: 'Apt. 556',
-        city: 'Gwenborough',
-        zipcode: '92998-3874',
-        geo: {
-          lat: '-37.3159',
-          lng: '81.1496',
-        },
-      },
-      phone: '1-770-736-8031 x56442',
-      website: 'hildegard.org',
-      company: {
-        name: 'Romaguera-Crona',
-        catchPhrase: 'Multi-layered client-server neural-net',
-        bs: 'harness real-time e-markets',
-      },
-    },
-  ];
+  return function(dispatch) {
+    dispatch(requestUsers())
+    
+    return axios.get(usersURL)
+      .then(
+        (res) => res.data,
+        (err) => console.log('An error occurred.', err),
+      )
+      .then((json) => {
+        return dispatch(receiveUsers(json))
+      })
+  }
 }
 
-export function fetchPostsForUser() {
-  console.log('posts!');
+export function requestUsers() {
+  return {
+    type: ACTION_TYPES.USERS.REQUEST,
+  }
+}
+
+export function receiveUsers(users) {
+  return {
+    type: ACTION_TYPES.USERS.RECEIVE,
+    users,
+  }
+}
+
+export function fetchPostsForUser(userId) {
+  return {
+    type: ACTION_TYPES.POSTS.FETCH_FOR_USER,
+    userId,
+  }
 }

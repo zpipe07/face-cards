@@ -33,7 +33,11 @@
     "rimraf": "^2.6.2",
     "serve-static": "^1.13.1",
     "style-loader": "^0.19.1",
-    "webpack": "^3.10.0"
+    "webpack": "^3.10.0",
+    "axios": "^0.17.1",
+    "react-redux": "^5.0.6",
+    "prop-types": "^15.6.0",
+    "redux-logger": "^3.0.6"
   },
   "repository": {
     "url": "https://glitch.com/edit/#!/react-babel"
