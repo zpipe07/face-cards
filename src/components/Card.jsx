@@ -8,7 +8,10 @@ function Card ({name, email, catchPhrase, onClick}) {
     <li className={Styles.CardItem}>
       <a
         href="#"
-        onClick={onClick}
+        onClick={(e) => {
+          e.preventDefault()
+          onClick()
+        }}
         className={Styles.Card}>
         <img
           className={Styles.Image}

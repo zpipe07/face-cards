@@ -10,7 +10,7 @@ export function fetchUsers() {
 
     return axios.get(usersURL)
       .then(
-        (res) => res.data,
+        (res) => getThreeRandomUsers(res.data),
         (err) => console.log('An error occurred.', err),
       )
       .then((json) => {
@@ -58,4 +58,23 @@ export function receivePosts(posts) {
     type: ACTION_TYPES.POSTS.RECEIVE,
     posts,
   }
+}
+
+function getThreeRandomUsers(users) {
+  const randomUsers = shuffleArray([].concat(users))
+  return randomUsers.slice(0, 3)
+}
+
+function shuffleArray(array) {
+  const shuffledArray = [].concat(array)
+
+  for (var i = shuffledArray.length-1; i >=0; i--) {
+    const randomIndex = Math.floor(Math.random()*(i+1))
+    const itemAtIndex = shuffledArray[randomIndex]
+
+    shuffledArray[randomIndex] = shuffledArray[i]
+    shuffledArray[i] = itemAtIndex
+  }
+
+  return shuffledArray
 }

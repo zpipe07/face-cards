@@ -88,7 +88,7 @@ export function rootReducer(state = initialState, action) {
     case ACTION_TYPES.POSTS.RECEIVE:
       return Object.assign({}, state, {
         posts: {
-          isFetching: true,
+          isFetching: false,
           items: action.posts,
         }
       })
