@@ -7,6 +7,7 @@ import Styles from './PostList.css'
 
 function PostList({ posts }) {
   return (
+    posts.length ?
     <ul className={Styles.PostList}>
       {posts.map(({ title, body, id }) => {
         return (
@@ -16,7 +17,8 @@ function PostList({ posts }) {
             key={id} />
         )
       })}
-    </ul>
+    </ul> :
+    <p className={Styles.NoPosts}>Click card to view five of their posts.</p>
   )
 }
 
