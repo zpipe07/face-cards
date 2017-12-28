@@ -1,0 +1,12 @@
+:local(.CardList) {}
+
+@media (min-width: 400px) {
+  :local(.CardList) {}
+}
+
+@media (min-width: 800px) {
+  :local(.CardList) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

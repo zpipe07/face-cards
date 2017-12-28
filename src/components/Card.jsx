@@ -5,14 +5,23 @@ import Styles from './Card.css'
 
 function Card ({name, email, catchPhrase, onClick}) {
   return (
-    <div
-      className={Styles.Card}
-      onClick={onClick}>
-      <img src={`https://api.adorable.io/avatars/150/${email}.png`}/>
-      <span>{catchPhrase}</span>
-      <span>{name}</span>
-      <span>{email}</span>
-    </div>
+    <li className={Styles.CardItem}>
+      <a
+        href="#"
+        onClick={onClick}
+        className={Styles.Card}>
+        <img
+          className={Styles.Image}
+          src={`https://api.adorable.io/avatars/150/${email}.png`}/>
+        <div className={Styles.TextWrapper}>
+          <h3 className={Styles.CatchPhrase}>
+            <q>{catchPhrase}</q>
+          </h3>
+          <h2 className={Styles.Name}>{name}</h2>
+          <p className={Styles.Link}>{email}</p>
+        </div>
+      </a>
+    </li>
   )
 }
 

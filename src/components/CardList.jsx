@@ -3,9 +3,11 @@ import PropTypes from 'prop-types'
 
 import Card from './Card'
 
+import Styles from './CardList.css'
+
 function CardList({ users, onCardClick }) {
   return (
-    <div>
+    <ul className={Styles.CardList}>
       {users.map(({ name, email, company, id }) => {
         return (
           <Card
@@ -16,7 +18,7 @@ function CardList({ users, onCardClick }) {
             onClick={() => onCardClick(id)} />
         )
       })}
-    </div>
+    </ul>
   )
 }
 
