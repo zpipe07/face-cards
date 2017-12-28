@@ -1,0 +1,17 @@
+:local(.PostItem) {
+  line-height: 1.5;
+  margin-bottom: 40px;
+}
+
+:local(.Title) {
+  opacity: 0.8;
+  font-size: 20px;
+  font-weight: 300;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+}
+
+:local(.Body) {
+  opacity: 0.8;
+  font-size: 13px;
+}

@@ -3,9 +3,11 @@ import PropTypes from 'prop-types'
 
 import Post from './Post'
 
+import Styles from './PostList.css'
+
 function PostList({ posts }) {
   return (
-    <div>
+    <ul className={Styles.PostList}>
       {posts.map(({ title, body, id }) => {
         return (
           <Post
@@ -14,7 +16,7 @@ function PostList({ posts }) {
             key={id} />
         )
       })}
-    </div>
+    </ul>
   )
 }
 
