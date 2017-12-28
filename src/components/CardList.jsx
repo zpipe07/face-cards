@@ -7,20 +7,21 @@ import Styles from './CardList.css'
 
 function CardList({ users, isFetching, onCardClick }) {
   return (
-    !isFetching ?
-    <ul className={Styles.CardList}>
-      {users.map(({ name, email, company, id }) => {
-        return (
-          <Card
-            name={name}
-            email={email}
-            catchPhrase={company.catchPhrase}
-            key={id}
-            onClick={() => onCardClick(id)} />
-        )
-      })}
-    </ul> :
-    <p className={Styles.Loading}>Loading Users...</p>
+    !isFetching ? (
+      <ul className={Styles.CardList}>
+        {users.map(({ name, email, company, id }) => {
+          return (
+            <Card
+              name={name}
+              email={email}
+              catchPhrase={company.catchPhrase}
+              key={id}
+              onClick={() => onCardClick(id)} />
+          )
+        })}
+      </ul>
+    ) :
+    (<p className={Styles.Loading}>Loading Users...</p>)
   )
 }
 

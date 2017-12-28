@@ -4,6 +4,7 @@ import PostList from '../components/PostList'
 const mapStateToProps = (state) => {
   return {
     posts: state.posts.items,
+    isFetching: state.posts.isFetching,
   }
 }
 

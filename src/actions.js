@@ -1,6 +1,7 @@
 import axios from 'axios'
 import { ACTION_TYPES } from './constants'
 import { getRandomArrayElements } from './utils/utils'
+import { setTimeout } from 'timers'
 
 const usersURL = 'https://jsonplaceholder.typicode.com/users'
 const postsURL = 'https://jsonplaceholder.typicode.com/posts?userId='
@@ -45,7 +46,9 @@ export function fetchPostsForUser(userId) {
         (err) => console.log('An error occurred.', err),
       )
       .then((json) => {
-        return dispatch(receivePosts(json))
+        setTimeout(() => {
+          return dispatch(receivePosts(json))
+        }, 2000)
       })
   }
 }

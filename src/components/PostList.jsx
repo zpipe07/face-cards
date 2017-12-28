@@ -5,20 +5,24 @@ import Post from './Post'
 
 import Styles from './PostList.css'
 
-function PostList({ posts }) {
+function PostList({ posts, isFetching }) {
   return (
-    posts.length ?
-    <ul className={Styles.PostList}>
-      {posts.map(({ title, body, id }) => {
-        return (
-          <Post
-            title={title}
-            body={body}
-            key={id} />
-        )
-      })}
-    </ul> :
-    <p className={Styles.NoPosts}>Click card to view five of their posts.</p>
+    !isFetching ? (
+      posts.length ? (
+        <ul className={Styles.PostList}>
+          {posts.map(({ title, body, id }) => {
+            return (
+              <Post
+                title={title}
+                body={body}
+                key={id} />
+            )
+          })}
+        </ul>
+      ) :
+      (<p className={Styles.NoPosts}>Click card to view five of their posts.</p>)
+    ) :
+    (<p className={Styles.NoPosts}>Loading Posts...</p>)
   )
 }
 
