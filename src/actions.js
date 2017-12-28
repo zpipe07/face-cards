@@ -15,7 +15,9 @@ export function fetchUsers() {
         (err) => console.log('An error occurred.', err),
       )
       .then((json) => {
-        return dispatch(receiveUsers(json))
+        setTimeout(() => {
+          return dispatch(receiveUsers(json))
+        }, 2000)
       })
   }
 }

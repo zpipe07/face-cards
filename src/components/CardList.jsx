@@ -5,8 +5,9 @@ import Card from './Card'
 
 import Styles from './CardList.css'
 
-function CardList({ users, onCardClick }) {
+function CardList({ users, isFetching, onCardClick }) {
   return (
+    !isFetching ?
     <ul className={Styles.CardList}>
       {users.map(({ name, email, company, id }) => {
         return (
@@ -18,7 +19,8 @@ function CardList({ users, onCardClick }) {
             onClick={() => onCardClick(id)} />
         )
       })}
-    </ul>
+    </ul> :
+    <p className={Styles.Loading}>Loading Users...</p>
   )
 }
 
