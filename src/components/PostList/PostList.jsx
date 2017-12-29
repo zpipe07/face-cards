@@ -26,4 +26,9 @@ function PostList({ posts, isFetching }) {
   )
 }
 
+PostList.propTypes = {
+  posts: PropTypes.arrayOf(PropTypes.object).isRequired,
+  isFetching: PropTypes.bool.isRequired,
+}
+
 export default PostList

@@ -12,4 +12,9 @@ function Post({title, body}) {
   )
 }
 
+Post.propTypes = {
+  title: PropTypes.string.isRequired,
+  body: PropTypes.string.isRequired,
+}
+
 export default Post

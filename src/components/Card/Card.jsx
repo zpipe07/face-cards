@@ -31,10 +31,11 @@ function Card ({name, email, catchPhrase, isActive, onClick}) {
 }
 
 Card.propTypes = {
-  onClick: PropTypes.func.isRequired,
   name: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired,
   catchPhrase: PropTypes.string.isRequired,
+  isActive: PropTypes.bool.isRequired,
+  onClick: PropTypes.func.isRequired,
 }
 
 export default Card

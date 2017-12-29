@@ -27,15 +27,9 @@ function CardList({ activeUser, users, isFetching, onCardClick }) {
 }
 
 CardList.propTypes = {
-  users: PropTypes.arrayOf(
-    PropTypes.shape({
-      name: PropTypes.string.isRequired,
-      email: PropTypes.string.isRequired,
-      company: PropTypes.shape({
-        catchPhrase: PropTypes.string.isRequired,
-      }).isRequired
-    }).isRequired
-  ).isRequired,
+  activeUser: PropTypes.number,
+  users: PropTypes.arrayOf(PropTypes.object).isRequired,
+  isFetching: PropTypes.bool.isRequired,
   onCardClick: PropTypes.func.isRequired,
 }
 
