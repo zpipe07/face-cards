@@ -38,7 +38,7 @@ export function receiveUsers(users) {
 
 export function fetchPostsForUser(userId) {
   return function(dispatch) {
-    dispatch(requestPosts())
+    dispatch(requestPosts(userId))
 
     return axios.get(`${postsURL}${userId}`)
       .then(
@@ -53,9 +53,10 @@ export function fetchPostsForUser(userId) {
   }
 }
 
-export function requestPosts() {
+export function requestPosts(userId) {
   return {
     type: ACTION_TYPES.POSTS.REQUEST,
+    userId,
   }
 }
 

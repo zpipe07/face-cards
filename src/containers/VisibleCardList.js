@@ -4,6 +4,7 @@ import CardList from '../components/CardList'
 
 const mapStateToProps = (state) => {
   return {
+    activeUser: state.activeUser,
     users: state.users.items,
     isFetching: state.users.isFetching,
   }

@@ -5,7 +5,7 @@ import Card from './Card'
 
 import Styles from './CardList.css'
 
-function CardList({ users, isFetching, onCardClick }) {
+function CardList({ activeUser, users, isFetching, onCardClick }) {
   return (
     !isFetching ? (
       <ul className={Styles.CardList}>
@@ -15,6 +15,7 @@ function CardList({ users, isFetching, onCardClick }) {
               name={name}
               email={email}
               catchPhrase={company.catchPhrase}
+              isActive={id === activeUser}
               key={id}
               onClick={() => onCardClick(id)} />
           )

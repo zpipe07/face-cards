@@ -3,16 +3,18 @@ import PropTypes from 'prop-types'
 
 import Styles from './Card.css'
 
-function Card ({name, email, catchPhrase, onClick}) {
+function Card ({name, email, catchPhrase, isActive, onClick}) {
+  const CardClass = isActive ? Styles.ActiveCard : Styles.Card
+
   return (
     <li className={Styles.CardItem}>
       <a
         href="#"
+        className={CardClass}
         onClick={(e) => {
           e.preventDefault()
           onClick()
-        }}
-        className={Styles.Card}>
+        }}>
         <img
           className={Styles.Image}
           src={`https://api.adorable.io/avatars/150/${email}.png`}/>
