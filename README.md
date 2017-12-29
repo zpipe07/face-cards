@@ -58,3 +58,5 @@ Familiarize yourself with the [Jest documentation](https://facebook.github.io/je
 ### Part 2 Design
 
 ![Design for Part 2][part2]
+
+node v8.1.4
