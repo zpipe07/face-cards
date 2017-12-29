@@ -1,13 +1,13 @@
 :local(.CardItem) {
-  margin-bottom: 20px;
+  margin-bottom: var(--spacing);
 }
 
 :local(.Card),
 :local(.ActiveCard) {
-  padding: 50px 20px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 2px;
-  box-shadow: 5px 5px 0 0 rgba(0, 0, 0, 0.05);
+  border: var(--grey-border);
+  box-shadow: var(--grey-box-shadow);
+  border-radius: var(--box-border-radius);
+  padding: calc(2.5 * var(--spacing)) var(--spacing);
   color: inherit;
   text-decoration: none;
   display: block;
@@ -15,29 +15,25 @@
 }
 
 :local(.ActiveCard) {
-  border: 1px solid rgba(0, 0, 0, 0.4);
+  border: var(--active-border);
 }
 
-:local(.Image) {
-  margin-bottom: 20px;
+:local(.Avatar) {
+  margin-bottom: var(--spacing);
 }
-
-:local(.TextWrapper) {}
 
 :local(.CatchPhrase) {
   font-style: italic;
-  font-size: 13px;
   line-height: 1.4;
-  margin-bottom: 20px;
+  margin-bottom: var(--spacing);
 }
 
 :local(.Name) {
-  font-size: 13px;
   line-height: 1.4;
   font-weight: 600;
 }
 
-:local(.Link) {
+:local(.Email) {
   font-size: 12px;
 }
 
@@ -47,9 +43,9 @@
     display: flex;
   }
 
-  :local(.Image) {
+  :local(.Avatar) {
     margin-bottom: 0;
-    margin-right: 20px;
+    margin-right: var(--spacing);
   }
 }
 
@@ -59,11 +55,11 @@
   }
 
   :local(.CardItem):nth-child(odd) {
-    padding-right: 10px;
+    padding-right: calc(var(--spacing) / 2);
   }
 
   :local(.CardItem):nth-child(even) {
-    padding-left: 10px;
+    padding-left: calc(var(--spacing) / 2);
   }
 }
 
@@ -74,15 +70,15 @@
 
   :local(.CardItem):nth-child(3n+1) {
     padding: 0;
-    padding-right: 10px;
+    padding-right: calc(var(--spacing) / 2);
   }
 
   :local(.CardItem):nth-child(3n+2) {
-    padding: 0 10px;
+    padding: 0 calc(var(--spacing) / 2);
   }
 
   :local(.CardItem):nth-child(3n) {
     padding: 0;
-    padding-left: 10px;
+    padding-left: calc(var(--spacing) / 2);
   }
 }

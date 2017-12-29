@@ -1,17 +1,10 @@
-:local(.CardList) {}
-
 :local(.Loading) {
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 2px;
-  box-shadow: 5px 5px 0 0 rgba(0, 0, 0, 0.05);
-  padding: 20px;
-  margin-bottom: 20px;
+  border: var(--grey-border);
+  box-shadow: var(--grey-box-shadow);
+  border-radius: var(--box-border-radius);
+  padding: var(--spacing);
+  margin-bottom: var(--spacing);
   text-align: center;
-  font-size: 13px;
-}
-
-@media (min-width: 400px) {
-  :local(.CardList) {}
 }
 
 @media (min-width: 800px) {

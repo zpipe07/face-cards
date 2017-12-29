@@ -16,14 +16,14 @@ function Card ({name, email, catchPhrase, isActive, onClick}) {
           onClick()
         }}>
         <img
-          className={Styles.Image}
+          className={Styles.Avatar}
           src={`https://api.adorable.io/avatars/150/${email}.png`}/>
-        <div className={Styles.TextWrapper}>
+        <div>
           <h3 className={Styles.CatchPhrase}>
             <q>{catchPhrase}</q>
           </h3>
           <h2 className={Styles.Name}>{name}</h2>
-          <p className={Styles.Link}>{email}</p>
+          <p className={Styles.Email}>{email}</p>
         </div>
       </a>
     </li>
