@@ -1,5 +1,23 @@
 # Face Cards
 
+## Description
+This is my very first time developing an application with Redux. I learned a lot from the wonderful documentation at [redux.js.org](https://redux.js.org/). I tried to follow their conventions closely.
+
+This is also my first time using custom CSS properties. I was pretty impressed. It's nice to have native support for variables in CSS. If this was a production app I would potentially need to provide fallback support.
+
+## Improvements
+- Improve test coverage. I am currently only unit testing logic around Redux. I decided against testing my React components due to time constraints and the simplicity of the components. In a production app I would want to test these.
+- I would love to smooth out the transitions between cards and posts being loaded. It is jarring at the moment, and I believe subtle transitions can really improve UX.
+
+## ToDos
+- split reducers into users and posts
+- figure out why arrayContaining() is not a function
+
+<!--
+using `node v8.1.4`
+
+# Face Cards
+
 Much of the work at SendGrid involves pulling in data from multiple sources and combining them into one, cohesive presentation.
 
 This problem is separated into two tasks. First, display three "cards" for randomly-selected users which displays their name, email address, company catchphrase, and, of course, their adorable avatar. Second, display 5 randomly-selected posts when a user clicks on an individual card.
@@ -57,6 +75,4 @@ Familiarize yourself with the [Jest documentation](https://facebook.github.io/je
 
 ### Part 2 Design
 
-![Design for Part 2][part2]
-
-node v8.1.4
+![Design for Part 2][part2] -->
