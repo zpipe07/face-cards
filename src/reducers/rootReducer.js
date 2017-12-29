@@ -1,4 +1,3 @@
-import { combineReducers } from 'redux'
 import { ACTION_TYPES } from '../constants/constants'
 
 const initialState = {
@@ -13,6 +12,7 @@ const initialState = {
   },
 }
 
+// TODO: split reducers into users and posts
 export function rootReducer(state = initialState, action) {
   switch (action.type) {
     case ACTION_TYPES.USERS.REQUEST:
