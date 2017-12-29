@@ -1,4 +1,5 @@
 # Face Cards
+[Live DEMO here](http://zackpiper.com/face-cards/)
 
 ## Description
 This is my very first time developing an application with Redux. I learned a lot from the wonderful documentation at [redux.js.org](https://redux.js.org/). I tried to follow their conventions closely.
