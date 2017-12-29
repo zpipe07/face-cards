@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
-import { fetchPostsForUser } from '../actions'
-import CardList from '../components/CardList'
+import { fetchPostsForUser } from '../actions/actions'
+import CardList from '../components/CardList/CardList'
 
 const mapStateToProps = (state) => {
   return {

@@ -4,10 +4,6 @@ import VisibleCardList from './containers/VisibleCardList'
 import VisiblePostList from './containers/VisiblePostList'
 
 class App extends Component {
-  componentWillMount() {
-     // users = fetchUsers()
-  }
-
   render() {
     return (
       <div className="App">

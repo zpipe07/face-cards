@@ -4,10 +4,12 @@ import { Provider } from 'react-redux'
 import { createStore, applyMiddleware } from 'redux'
 import thunkMiddleware from 'redux-thunk'
 import { createLogger } from 'redux-logger'
-import './index.css';
+
 import App from './App';
-import { rootReducer } from './reducers'
-import { fetchUsers } from './actions'
+import { rootReducer } from './reducers/rootReducer'
+import { fetchUsers } from './actions/actions'
+
+import './index.css';
 
 const loggerMiddleware = createLogger()
 

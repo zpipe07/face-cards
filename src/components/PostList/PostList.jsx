@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import Post from './Post'
+import Post from '../Post/Post'
 
 import Styles from './PostList.css'
 
